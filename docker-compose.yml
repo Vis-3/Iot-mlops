@@ -1,0 +1,93 @@
+# docker-compose.yml (Revised again - MLflow command fix)
+
+# version: '3.8' # Removed: This attribute is often obsolete in newer Docker Compose
+
+services:
+  # Kafka (and Zookeeper)
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.0
+    hostname: zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka:
+    image: confluentinc/cp-kafka:7.6.0
+    hostname: kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+      - "9093:9093" # For internal communication if needed, or external if configured
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+    depends_on:
+      - zookeeper
+
+  # MLflow Tracking Server - UPDATED COMMAND
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.14.0 # Using v2.14.0, which should be stable
+    container_name: mlflow-server
+    ports:
+      - "5000:5000"
+    environment:
+      MLFLOW_TRACKING_URI: http://localhost:5000
+      # MLFLOW_METRICS_DB_URI: sqlite:///mlruns.db # This is part of --backend-store-uri
+    volumes:
+      - ./mlflow_data:/mlflow_data
+    # *** UPDATED THIS LINE: --default-artifacts-uri changed to --default-artifact-root ***
+    command: mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:///mlflow_data/mlruns.db --default-artifact-root ./mlflow_data/artifacts
+
+  # Prometheus
+  prometheus:
+    image: prom/prometheus:v2.53.0 # Latest stable Prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+      - prometheus_data:/prometheus # Persist Prometheus data
+    command: --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus
+    depends_on:
+      - cadvisor # Depends on cAdvisor to scrape container metrics
+
+  # Grafana
+  grafana:
+    image: grafana/grafana:11.6.3 # Updated based on your success!
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana # Persist Grafana data
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: password # IMPORTANT: Change this in a real scenario!
+    depends_on:
+      - prometheus
+
+  # cAdvisor (for monitoring Docker containers)
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.52.1 # Updated based on your success!
+    container_name: cadvisor
+    ports:
+      - "8080:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    # For macOS, you might need extra config or it might not work perfectly with host metrics.
+    # We'll primarily focus on custom metrics from our FastAPI app.
+
+volumes:
+  prometheus_data:
+  grafana_data:
