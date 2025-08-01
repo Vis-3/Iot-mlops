@@ -19,52 +19,6 @@ MLflow: Acts as the Model Registry, storing the trained model, its metadata, and
 Anomaly Detector: The core of the project. It's a consumer that pulls data from Kafka, uses the MLflow-registered model to predict the next value, and compares it to the actual data point to detect anomalies.
 Prometheus & Grafana: Scrape metrics from the running services and provide a beautiful, real-time dashboard for monitoring anomalies and system health.
 
-This is a fantastic final step for a project. A great README not only documents the code but also sells the project and guides users.
-
-Here is a comprehensive and "amazing" README you can use, tailored to your MLOps pipeline. Just copy and paste it into a README.md file in your repository's root directory.
-
-🤖 Real-Time IoT Anomaly Detection MLOps Pipeline
-An end-to-end MLOps pipeline for real-time anomaly detection on streaming IoT sensor data using AutoGluon, MLflow, Kafka, Prometheus, and Grafana.
-
-✨ Features
-Model Training & Experiment Tracking: Trains a time series model using AutoGluon and logs the experiment with MLflow.
-
-Model Registry & Versioning: Registers the trained model in the MLflow Model Registry for version control.
-
-Real-time Data Streaming: Simulates IoT data streaming using a Python producer and Kafka topics.
-
-Anomlay Detection Service: A Python service that loads the model from MLflow, consumes streaming data from Kafka, and flags anomalies in real-time.
-
-Monitoring & Visualization: Observes the pipeline's health and detected anomalies using Prometheus and Grafana.
-
-Containerized Environment: All services are orchestrated via Docker Compose for easy setup and deployment.
-
-🏗️ Architecture
-The pipeline is built on a microservices architecture, with each component running in its own Docker container.
-
-Code snippet
-
-graph TD
-    A[Data Producer] --> B(Kafka Topic: iot_data)
-    B --> C{Anomaly Detector Service}
-    C --> D[MLflow Server & Registry]
-    C --> E(Kafka Topic: iot_anomalies)
-    E --> F[Prometheus Scraper]
-    subgraph Monitoring Stack
-        F --> G[Prometheus]
-        G --> H[Grafana Dashboard]
-    end
-    D --> I[Anomaly Detector Service: Model Loading]
-    C --> I
-Data Producer: A Python script simulates an IoT device, pushing sensor readings to a Kafka topic.
-
-Kafka: Serves as the central nervous system for streaming data.
-
-MLflow: Acts as the Model Registry, storing the trained model, its metadata, and its artifacts.
-
-Anomaly Detector: The core of the project. It's a consumer that pulls data from Kafka, uses the MLflow-registered model to predict the next value, and compares it to the actual data point to detect anomalies.
-
-Prometheus & Grafana: Scrape metrics from the running services and provide a beautiful, real-time dashboard for monitoring anomalies and system health.
 
 Getting Started
 Prerequisites
@@ -111,7 +65,7 @@ Run the Anomaly Detector & Data Producer
 With the model promoted, you can start the data stream and the detector.
 Run the simulator script again and monitor the logs using - docker compose logs -f anomaly-detector
 
-onitor with Grafana
+Monitor with Grafana
 Open your browser and navigate to the Grafana dashboard: http://localhost:3000
 
 Login with the default credentials: admin / admin
