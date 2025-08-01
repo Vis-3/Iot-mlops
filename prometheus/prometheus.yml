@@ -12,9 +12,8 @@ scrape_configs:
     static_configs:
       - targets: ['cadvisor:8080'] # cAdvisor running in Docker
 
-  # We will add a job for our FastAPI app here later!
-  # - job_name: 'fastapi_app'
-  #   static_configs:
-  #     - targets: ['host.docker.internal:8000'] # How Docker containers refer to host services
-  #       # For Linux, replace 'host.docker.internal' with your host machine's IP address.
-  #       # If running FastAPI also in Docker, targets: ['fastapi_service_name:8000']
+  - job_name: 'anomaly-detector'
+    static_configs:
+      - targets: ['anomaly-detector:8000'] 
+
+  

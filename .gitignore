@@ -11,6 +11,9 @@ data/  # DVC will manage files in this folder, Git should ignore the actual data
 # MLflow
 mlruns/
 mlflow_data/ # Directory where MLflow stores data/artifacts
+*.db
+*.sqlite
+mlflow_data/artifacts
 
 # IDE specific files
 .vscode/

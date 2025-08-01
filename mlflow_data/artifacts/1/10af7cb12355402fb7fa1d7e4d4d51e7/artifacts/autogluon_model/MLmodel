@@ -1,0 +1,30 @@
+artifact_path: autogluon_model
+flavors:
+  python_function:
+    artifacts:
+      model_dir:
+        path: artifacts/autogluon_model
+        uri: /app/autogluon_model
+    cloudpickle_version: 3.1.1
+    code: null
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.10.12
+    streamable: false
+mlflow_version: 2.14.0
+model_size_bytes: 1353934
+model_uuid: fc094960e3664574b8ba1a4c2ec74c24
+run_id: 10af7cb12355402fb7fa1d7e4d4d51e7
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  type: dataframe
+signature:
+  inputs: '[{"type": "string", "name": "item_id", "required": true}, {"type": "datetime",
+    "name": "timestamp", "required": true}]'
+  outputs: '[{"type": "double", "name": "target", "required": true}]'
+  params: null
+utc_time_created: '2025-07-31 19:58:58.773493'

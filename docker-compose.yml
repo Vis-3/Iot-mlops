@@ -1,9 +1,8 @@
-# docker-compose.yml (Revised again - MLflow command fix)
-
-# version: '3.8' # Removed: This attribute is often obsolete in newer Docker Compose
+networks:
+  default:
+    driver: bridge  
 
 services:
-  # Kafka (and Zookeeper)
   zookeeper:
     image: confluentinc/cp-zookeeper:7.6.0
     hostname: zookeeper
@@ -20,7 +19,7 @@ services:
     container_name: kafka
     ports:
       - "9092:9092"
-      - "9093:9093" # For internal communication if needed, or external if configured
+      - "9093:9093"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
@@ -32,50 +31,84 @@ services:
     depends_on:
       - zookeeper
 
-  # MLflow Tracking Server - UPDATED COMMAND
   mlflow:
-    image: ghcr.io/mlflow/mlflow:v2.14.0 # Using v2.14.0, which should be stable
-    container_name: mlflow-server
+    image: ghcr.io/mlflow/mlflow:v2.14.0
+    container_name: mlflow
     ports:
       - "5000:5000"
     environment:
-      MLFLOW_TRACKING_URI: http://localhost:5000
-      # MLFLOW_METRICS_DB_URI: sqlite:///mlruns.db # This is part of --backend-store-uri
+      - MLFLOW_TRACKING_URI=http://localhost:5000
+      - MLFLOW_BACKEND_STORE_URI=sqlite:///mlflow_data/mlruns.db 
+      - MLFLOW_DEFAULT_ARTIFACT_ROOT=file:/mlflow_data/artifacts 
+    volumes:
+      - ./mlflow_data:/mlflow_data 
+    command: >
+      mlflow server
+      --host 0.0.0.0
+      --port 5000
+      --backend-store-uri sqlite:///mlflow_data/mlruns.db
+      --artifacts-destination file:/mlflow_data/artifacts
+    depends_on:
+      - kafka
+
+  trainer:
+    build:
+      context: ./train
+      dockerfile: Dockerfile
+    container_name: iot-trainer
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
     volumes:
       - ./mlflow_data:/mlflow_data
-    # *** UPDATED THIS LINE: --default-artifacts-uri changed to --default-artifact-root ***
-    command: mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:///mlflow_data/mlruns.db --default-artifact-root ./mlflow_data/artifacts
+      - ./data:/app/data
+      - ./detect_anomalies:/app/detect_anomalies
+    depends_on:
+      - mlflow
 
-  # Prometheus
+  anomaly-detector:
+    build: ./detect_anomalies 
+    container_name: anomaly-detector
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092 
+      MLFLOW_TRACKING_URI: http://mlflow:5000 
+      MODEL_NAME: AutoGluonIoTAnomalyDetector
+      MODEL_ALIAS: production 
+    volumes:
+      - ./mlflow_data:/mlflow_data
+      #- ./latest_model_uri.txt:/app/latest_model_uri.txt
+    ports:
+      - "8000:8000"
+    depends_on:
+      - kafka
+      - mlflow
+
   prometheus:
-    image: prom/prometheus:v2.53.0 # Latest stable Prometheus
+    image: prom/prometheus:v2.53.0
     container_name: prometheus
     ports:
       - "9090:9090"
     volumes:
       - ./prometheus/:/etc/prometheus/
-      - prometheus_data:/prometheus # Persist Prometheus data
+      - prometheus_data:/prometheus
     command: --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus
     depends_on:
-      - cadvisor # Depends on cAdvisor to scrape container metrics
+      - cadvisor
 
-  # Grafana
   grafana:
-    image: grafana/grafana:11.6.3 # Updated based on your success!
+    image: grafana/grafana:11.6.3
     container_name: grafana
     ports:
       - "3000:3000"
     volumes:
-      - grafana_data:/var/lib/grafana # Persist Grafana data
+      - grafana_data:/var/lib/grafana
     environment:
       GF_SECURITY_ADMIN_USER: admin
-      GF_SECURITY_ADMIN_PASSWORD: password # IMPORTANT: Change this in a real scenario!
+      GF_SECURITY_ADMIN_PASSWORD: password
     depends_on:
       - prometheus
 
-  # cAdvisor (for monitoring Docker containers)
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor:v0.52.1 # Updated based on your success!
+    image: gcr.io/cadvisor/cadvisor:v0.52.1
     container_name: cadvisor
     ports:
       - "8080:8080"
@@ -85,8 +118,7 @@ services:
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
       - /dev/disk/:/dev/disk:ro
-    # For macOS, you might need extra config or it might not work perfectly with host metrics.
-    # We'll primarily focus on custom metrics from our FastAPI app.
+    privileged: true
 
 volumes:
   prometheus_data:

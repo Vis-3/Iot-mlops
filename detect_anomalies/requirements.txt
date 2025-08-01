@@ -1,0 +1,4 @@
+mlflow==2.14.0
+kafka-python==2.0.2
+pandas==2.2.2
+autogluon.timeseries==1.1.0 # Ensure this matches what was used for training

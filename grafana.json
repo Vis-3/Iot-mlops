@@ -1,0 +1,81 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "description": "Dashboard for IoT Anomaly Detection metrics",
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": null,
+  "iteration": 168,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "prometheus",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "id": 1,
+      "title": "Total Anomalies by Device Type",
+      "type": "bar",
+      "targets": [
+        {
+          "expr": "sum(anomaly_total) by (device_type)",
+          "legendFormat": "{{device_type}}",
+          "refId": "A"
+        }
+      ],
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      }
+    },
+    {
+      "datasource": "prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none",
+          "decimals": 2
+        },
+        "overrides": []
+      },
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+      "id": 2,
+      "title": "Predicted Values Over Time",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "predicted_value",
+          "legendFormat": "{{device_id}}",
+          "refId": "B"
+        }
+      ],
+      "options": {
+        "tooltip": {
+          "mode": "single"
+        }
+      }
+    }
+  ],
+  "schemaVersion": 36,
+  "style": "dark",
+  "tags": ["IoT", "Anomaly Detection"],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "IoT Anomaly Detection",
+  "version": 1
+}

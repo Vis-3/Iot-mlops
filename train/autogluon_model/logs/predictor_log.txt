@@ -1,0 +1,2239 @@
+Frequency 'S' stored as 's'
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.02 GB / 7.46 GB (67.3%)
+Disk Space Avail:   936.01 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 11:48:29
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 41.4s of the 289.9s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.27    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 47.8s of the 286.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	2.46    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 56.8s of the 284.1s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	2.21    s     = Training runtime
+	0.08    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 70.4s of the 281.8s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	5.11    s     = Training runtime
+	0.13    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 92.2s of the 276.5s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.18    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 137.1s of the 274.2s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.30    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.45    s     = Training runtime
+	4.57    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 19.44 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.00 GB / 7.46 GB (67.1%)
+Disk Space Avail:   936.00 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 11:50:48
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 41.9s of the 293.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.15    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.4s of the 290.5s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	2.47    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.6s of the 287.9s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.67    s     = Training runtime
+	0.10    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.5s of the 286.2s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.69    s     = Training runtime
+	0.14    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 93.8s of the 281.3s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.53    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 139.9s of the 279.8s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.35    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.57    s     = Training runtime
+	4.50    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.66 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.00 GB / 7.46 GB (67.1%)
+Disk Space Avail:   936.00 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 11:54:51
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 41.9s of the 293.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.23    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.4s of the 290.3s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.47    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.6s of the 287.8s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.67    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.5s of the 286.0s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.46    s     = Training runtime
+	0.15    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 93.8s of the 281.4s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.48    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.0s of the 279.9s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.32    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.50    s     = Training runtime
+	4.55    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.33 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.00 GB / 7.46 GB (67.0%)
+Disk Space Avail:   936.00 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 11:57:32
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.1s of the 294.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.21    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.5s of the 291.3s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.43    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.8s of the 288.8s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.78    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.7s of the 287.0s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.57    s     = Training runtime
+	0.13    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 94.1s of the 282.3s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.51    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.4s of the 280.7s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.32    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.52    s     = Training runtime
+	4.54    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.50 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.00 GB / 7.46 GB (67.1%)
+Disk Space Avail:   936.00 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 12:03:38
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.0s of the 293.7s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.13    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.4s of the 290.5s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.40    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.6s of the 288.1s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.78    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.6s of the 286.2s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.40    s     = Training runtime
+	0.13    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 93.9s of the 281.7s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.47    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.1s of the 280.2s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.29    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.49    s     = Training runtime
+	4.42    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.14 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.34 GB / 7.46 GB (71.6%)
+Disk Space Avail:   936.00 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 12:35:47
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 41.5s of the 290.8s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.15    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 47.9s of the 287.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.41    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.0s of the 285.2s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	2.08    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 70.8s of the 283.0s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.60    s     = Training runtime
+	0.16    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 92.7s of the 278.2s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.18    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 138.0s of the 276.0s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.31    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.48    s     = Training runtime
+	4.46    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 18.63 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.31 GB / 7.46 GB (71.2%)
+Disk Space Avail:   936.01 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 12:43:06
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 41.9s of the 293.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.10    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.4s of the 290.4s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.49    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.6s of the 287.9s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.83    s     = Training runtime
+	0.08    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.5s of the 286.0s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.40    s     = Training runtime
+	0.14    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 93.8s of the 281.4s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.50    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.0s of the 279.9s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.30    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.46    s     = Training runtime
+	4.40    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.30 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.26 GB / 7.46 GB (70.6%)
+Disk Space Avail:   936.00 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 12:46:04
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.0s of the 293.7s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.01    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.4s of the 290.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.39    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.6s of the 288.2s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.82    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.6s of the 286.3s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.71    s     = Training runtime
+	0.15    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 93.8s of the 281.4s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.38    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.0s of the 280.0s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.35    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.43    s     = Training runtime
+	4.36    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.43 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.57 GB / 7.46 GB (74.6%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 15:31:36
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 41.4s of the 290.0s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.05    s     = Training runtime
+	3.42    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 47.7s of the 286.5s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	2.41    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 56.8s of the 284.0s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.81    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 70.5s of the 282.2s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.59    s     = Training runtime
+	0.14    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 92.5s of the 277.4s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.20    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 137.6s of the 275.2s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.36    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.44    s     = Training runtime
+	4.78    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 19.04 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.26 GB / 7.46 GB (70.5%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 15:38:14
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.0s of the 294.3s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.10    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.5s of the 291.2s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	2.22    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.8s of the 288.9s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.56    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.8s of the 287.2s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.58    s     = Training runtime
+	0.15    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 94.2s of the 282.5s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.51    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.5s of the 281.0s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.42    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.47    s     = Training runtime
+	4.52    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.16 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.22 GB / 7.46 GB (70.0%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 15:54:59
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 41.6s of the 291.2s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.07    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.0s of the 288.1s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.27    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.2s of the 285.8s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.69    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.0s of the 284.0s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.86    s     = Training runtime
+	0.14    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 93.0s of the 279.0s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.18    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 138.4s of the 276.8s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.37    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.61    s     = Training runtime
+	4.44    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 18.26 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.34 GB / 7.46 GB (71.6%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:05:18
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.0s of the 294.2s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.02    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.5s of the 291.1s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.36    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.7s of the 288.7s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.58    s     = Training runtime
+	0.08    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.8s of the 287.0s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	5.09    s     = Training runtime
+	0.14    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 93.9s of the 281.8s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.52    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.1s of the 280.3s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.33    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.50    s     = Training runtime
+	4.35    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.59 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.34 GB / 7.46 GB (71.6%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:10:28
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.0s of the 293.8s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.13    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.4s of the 290.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.43    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.6s of the 288.1s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.74    s     = Training runtime
+	0.09    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.6s of the 286.3s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.66    s     = Training runtime
+	0.16    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 93.8s of the 281.5s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.42    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.0s of the 280.0s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.26    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.51    s     = Training runtime
+	4.40    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.40 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.35 GB / 7.46 GB (71.8%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:15:06
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.1s of the 294.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.14    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.6s of the 291.4s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.35    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.8s of the 289.0s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.53    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.8s of the 287.4s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.68    s     = Training runtime
+	0.14    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 94.2s of the 282.5s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.53    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.5s of the 281.0s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.31    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.46    s     = Training runtime
+	4.45    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.26 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.25 GB / 7.46 GB (70.4%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:17:59
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.1s of the 294.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.17    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.6s of the 291.4s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.38    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.8s of the 288.9s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.53    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.8s of the 287.3s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.72    s     = Training runtime
+	0.13    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 94.2s of the 282.5s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.43    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.5s of the 281.0s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	1.35    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.55    s     = Training runtime
+	4.52    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.33 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.63 GB / 7.46 GB (75.5%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:23:42
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.0s of the 294.1s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	2.99    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.5s of the 291.1s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	2.28    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.7s of the 288.7s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.56    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.8s of the 287.1s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.75    s     = Training runtime
+	0.13    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 94.1s of the 282.2s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	1.51    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.3s of the 280.7s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	1.54    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.62    s     = Training runtime
+	4.54    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.70 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.43 GB / 7.46 GB (72.8%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:27:21
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.0s of the 294.2s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.15    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.5s of the 291.0s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.25    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.7s of the 288.7s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.55    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.8s of the 287.1s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.62    s     = Training runtime
+	0.13    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 94.1s of the 282.3s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.39    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.4s of the 280.9s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.27    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.46    s     = Training runtime
+	4.42    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 15.94 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.29 GB / 7.46 GB (70.9%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:29:01
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.1s of the 294.5s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.00    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.6s of the 291.5s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	2.30    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.8s of the 289.1s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.59    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.9s of the 287.5s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.60    s     = Training runtime
+	0.16    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 94.2s of the 282.7s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.48    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.6s of the 281.2s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.34    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.50    s     = Training runtime
+	4.34    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.12 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.35 GB / 7.46 GB (71.7%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:37:44
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.1s of the 294.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.03    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.6s of the 291.5s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.30    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.8s of the 289.2s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.44    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.9s of the 287.7s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.73    s     = Training runtime
+	0.14    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 94.3s of the 282.8s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.47    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.7s of the 281.3s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.22    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.49    s     = Training runtime
+	4.25    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 15.89 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.66 GB / 7.46 GB (75.8%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:42:50
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.0s of the 294.2s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.04    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.5s of the 291.2s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	2.25    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.8s of the 288.9s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.61    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.8s of the 287.2s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.66    s     = Training runtime
+	0.16    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 94.1s of the 282.4s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.49    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 140.4s of the 280.8s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	1.57    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.66    s     = Training runtime
+	4.61    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 16.46 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.34 GB / 7.46 GB (71.7%)
+Disk Space Avail:   935.92 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:47:34
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.5s of the 297.3s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.40    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 49.3s of the 295.9s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.93    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 59.0s of the 295.0s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	0.62    s     = Training runtime
+	0.03    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 73.6s of the 294.3s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	1.80    s     = Training runtime
+	0.05    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 97.5s of the 292.5s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.68    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 145.9s of the 291.8s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.57    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.20    s     = Training runtime
+	1.97    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 6.76 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.37 GB / 7.46 GB (72.0%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 16:52:30
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.5s of the 297.7s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.33    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 49.4s of the 296.3s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.02    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 59.1s of the 295.3s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	0.64    s     = Training runtime
+	0.03    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 73.7s of the 294.6s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	1.81    s     = Training runtime
+	0.05    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 97.6s of the 292.8s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.62    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 146.1s of the 292.1s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.52    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.19    s     = Training runtime
+	1.86    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 6.67 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.26 GB / 7.46 GB (70.6%)
+Disk Space Avail:   935.93 GB / 1006.85 GB (93.0%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-19 17:02:36
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.5s of the 297.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	1.40    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 49.4s of the 296.2s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.96    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 59.0s of the 295.2s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	0.63    s     = Training runtime
+	0.03    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 73.6s of the 294.5s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	1.84    s     = Training runtime
+	0.05    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 97.5s of the 292.6s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.62    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 146.0s of the 292.0s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.53    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.17    s     = Training runtime
+	1.94    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 6.72 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.31 GB / 7.46 GB (71.3%)
+Disk Space Avail:   929.16 GB / 1006.85 GB (92.3%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-24 17:34:34
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 41.3s of the 289.2s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.06    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 47.7s of the 286.1s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.25    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 56.8s of the 283.8s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	1.69    s     = Training runtime
+	0.08    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 70.5s of the 282.0s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	4.68    s     = Training runtime
+	0.15    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 92.4s of the 277.1s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.26    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 137.4s of the 274.7s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.30    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.45    s     = Training runtime
+	4.36    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 18.43 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.17 GB / 7.46 GB (69.3%)
+Disk Space Avail:   929.14 GB / 1006.85 GB (92.3%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 3010 rows (NaN fraction=0.2%), 5 time series. Median time series length is 602 (min=602, max=602). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-25 16:35:28
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.2s of the 295.6s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	1.49    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 49.0s of the 294.1s of remaining time.
+	-0.0528       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.93    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 58.6s of the 293.2s of remaining time.
+	-0.0546       = Validation score (-MAPE)
+	0.64    s     = Training runtime
+	0.03    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 73.1s of the 292.5s of remaining time.
+	-0.0578       = Validation score (-MAPE)
+	1.86    s     = Training runtime
+	0.06    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 96.9s of the 290.6s of remaining time.
+	-0.0484       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.97    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 144.8s of the 289.6s of remaining time.
+	-0.0424       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.55    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'Naive': 0.1, 'Theta': 0.9}
+	-0.0415       = Validation score (-MAPE)
+	0.19    s     = Training runtime
+	2.03    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 7.81 s
+Best model: WeightedEnsemble
+Best model score: -0.0415
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.07 GB / 7.46 GB (68.0%)
+Disk Space Avail:   929.09 GB / 1006.85 GB (92.3%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 1565 rows (NaN fraction=0.3%), 5 time series. Median time series length is 313 (min=313, max=313). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-28 14:37:08
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 41.4s of the 289.8s of remaining time.
+	-0.0315       = Validation score (-MAPE)
+	0.04    s     = Training runtime
+	3.24    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 47.7s of the 286.5s of remaining time.
+	-0.0315       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.46    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 56.8s of the 284.0s of remaining time.
+	-0.0233       = Validation score (-MAPE)
+	2.25    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 70.4s of the 281.7s of remaining time.
+	-0.0209       = Validation score (-MAPE)
+	1.27    s     = Training runtime
+	0.12    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 93.4s of the 280.3s of remaining time.
+	-0.0205       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.19    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 139.0s of the 278.1s of remaining time.
+	-0.0210       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.26    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'ETS': 0.33, 'Naive': 0.33, 'Theta': 0.33}
+	-0.0139       = Validation score (-MAPE)
+	0.45    s     = Training runtime
+	6.69    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 15.52 s
+Best model: WeightedEnsemble
+Best model score: -0.0139
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.05 GB / 7.46 GB (67.7%)
+Disk Space Avail:   929.10 GB / 1006.85 GB (92.3%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 1565 rows (NaN fraction=0.3%), 5 time series. Median time series length is 313 (min=313, max=313). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-28 14:46:13
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.1s of the 294.5s of remaining time.
+	-0.0315       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.85    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.6s of the 291.6s of remaining time.
+	-0.0315       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.19    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.9s of the 289.4s of remaining time.
+	-0.0233       = Validation score (-MAPE)
+	1.97    s     = Training runtime
+	0.08    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.8s of the 287.4s of remaining time.
+	-0.0209       = Validation score (-MAPE)
+	1.31    s     = Training runtime
+	0.11    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 95.3s of the 285.9s of remaining time.
+	-0.0205       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.40    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 142.3s of the 284.5s of remaining time.
+	-0.0210       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.31    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'ETS': 0.33, 'Naive': 0.33, 'Theta': 0.33}
+	-0.0139       = Validation score (-MAPE)
+	0.53    s     = Training runtime
+	5.55    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 12.73 s
+Best model: WeightedEnsemble
+Best model score: -0.0139
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Frequency 'S' stored as 's'
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/home/skar/iot-mlops/train/autogluon_model'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+CPU Count:          16
+GPU Count:          1
+Memory Avail:       5.04 GB / 7.46 GB (67.5%)
+Disk Space Avail:   929.10 GB / 1006.85 GB (92.3%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'freq': 's',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 1,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 's'.
+Provided train_data has 1565 rows (NaN fraction=0.3%), 5 time series. Median time series length is 313 (min=313, max=313). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-07-28 14:48:51
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 42.1s of the 294.5s of remaining time.
+	-0.0315       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	3.01    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 48.6s of the 291.4s of remaining time.
+	-0.0315       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	2.27    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 57.8s of the 289.1s of remaining time.
+	-0.0233       = Validation score (-MAPE)
+	1.92    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 71.8s of the 287.1s of remaining time.
+	-0.0209       = Validation score (-MAPE)
+	1.42    s     = Training runtime
+	0.11    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 95.2s of the 285.6s of remaining time.
+	-0.0205       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.29    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 142.1s of the 284.3s of remaining time.
+	-0.0210       = Validation score (-MAPE)
+	0.03    s     = Training runtime
+	1.25    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'ETS': 0.33, 'Naive': 0.33, 'Theta': 0.33}
+	-0.0139       = Validation score (-MAPE)
+	0.51    s     = Training runtime
+	5.54    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 12.84 s
+Best model: WeightedEnsemble
+Best model score: -0.0139
+data with frequency 'IRREG' has been resampled to frequency 's'.
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
